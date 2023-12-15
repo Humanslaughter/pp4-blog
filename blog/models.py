@@ -13,6 +13,12 @@ class Post(models.Model):
     posted_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ["-posted_on"]
+
+    def __str__(self):
+        return f"{self.post_title} | {self.blogger}"
+
 class Comment(models.Model):
     blog_post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     blogger = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
