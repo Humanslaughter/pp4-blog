@@ -18,7 +18,7 @@
                                     <p class="blogger">Blogger: {{ post.blogger }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'post_detail' post.post_slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.post_title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
