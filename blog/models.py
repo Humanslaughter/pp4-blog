@@ -9,4 +9,6 @@ class Post(models.Model):
     post_slug = models.SlugField(max_length=200, unique=True)
     post_content = models.TextField()
     post_status = models.IntegerField(choices=STATUS, default=0)
+    excerpt = models.TextField(blank=True)
     posted_on = models.DateTimeField(auto_now_add=True)
+    edited_on = models.DateTimeField(auto_now=True)
