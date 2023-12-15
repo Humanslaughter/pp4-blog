@@ -12,3 +12,10 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     posted_on = models.DateTimeField(auto_now_add=True)
     edited_on = models.DateTimeField(auto_now=True)
+
+class Comment(models.Model):
+    blog_post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    blogger = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    posted_on = models.DateTimeField(auto_now_add=True)
