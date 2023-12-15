@@ -25,3 +25,9 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     posted_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-posted_on"]
+
+    def __str__(self):
+        return f"Comment: {self.body} | By: {self.blogger}"
