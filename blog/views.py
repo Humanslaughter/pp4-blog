@@ -14,6 +14,14 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, post_slug=slug)
     comments = post.comments.all().order_by("-posted_on")
     comment_count = post.comments.filter(approved=True).count()
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.blogger = request.user
+            comment.blog_post = post
+            comment.save()
+
     comment_form = CommentForm()
 
     return render(
