@@ -13,7 +13,11 @@
                 <p class="post-subtitle">{{ post.blogger }} | {{ post.posted_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/default.webp' %}" class="scale" alt="placeholder">
+              {% if "placeholder" in post.post_image.url %}
+              <img src="{% static 'images/default.webp' %}" class="scale" alt="placeholder image">
+              {% else %}
+              <img src="{{ post.post_image.url }}" class="scale" alt="{{ post.post_title }}">
+              {% endif %}
             </div>
         </div>
     </div>
