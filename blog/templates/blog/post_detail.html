@@ -55,7 +55,7 @@
         <div class="p-2 comments
           {% if not comment.approved and comment.blogger == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-          <p class="font-weight-bold">
+          <p class="font-weight-bold" id="commenter">
             {{ comment.blogger }}
             <span class="font-weight-normal">
               {{ comment.posted_on }}
@@ -81,7 +81,7 @@
         <div class="card-body">
           {% if user.is_authenticated %}
           <h3>Leave a comment!</h3>
-          <p>Commenting as: {{ user.username }}</p>
+          <p class="p-comment">Commenting as: {{ user.username }}</p>
           <form id="commentForm" method="post"
             style="margin-top: 1.3em;">
             {{ comment_form | crispy }}
@@ -90,7 +90,7 @@
               class="btn btn-signup btn-lg">Post</button>
           </form>
           {% else %}
-          <p>Log in to leave a comment!</p>
+          <p class="p-comment">Log in to leave a comment!</p>
           {% endif %}
         </div>
       </div>

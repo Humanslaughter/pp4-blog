@@ -85,7 +85,7 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="text-end m-3">Logged in as {{ user }}</p>
+        <p class="text-end m-3">Logged in as <span id="loggedInUser">{{ user }}</span></p>
         {% else %}
         <p class="text-end m-3">Not logged in</p>
         {% endif %}
