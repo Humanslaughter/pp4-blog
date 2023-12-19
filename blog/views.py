@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import User, Permission
 
@@ -93,8 +93,12 @@ def comment_delete(request, slug, comment_id):
 
 class AddPost(generic.CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'blog/add_post.html'
-    fields = ('blogger', 'post_title', 'post_slug', 'post_image', 'excerpt', 'post_content', 'post_status')
+    
+    def form_valid(self, form):
+        form.instance.blogger = self.request.user
+        return super().form_valid(form)
 
 @login_required
 @permission_required('blog.add_post', raise_exception=True)
