@@ -30,8 +30,8 @@
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.posted_on}}
-                            </p>
+                            <p class="card-text text-muted h6">{{ post.posted_on}} - <a href="{% url 'edit_post' post.pk %}">Edit</a></p>
+                            
                         </div>
                     </div>
                 </div>

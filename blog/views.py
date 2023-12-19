@@ -95,10 +95,15 @@ class AddPost(generic.CreateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/add_post.html'
-    
+
     def form_valid(self, form):
         form.instance.blogger = self.request.user
         return super().form_valid(form)
+
+class EditPost(generic.UpdateView):
+    model = Post
+    template_name = 'blog/edit_post.html'
+    fields= ('post_title', 'post_slug', 'post_image', 'excerpt', 'post_content')
 
 @login_required
 @permission_required('blog.add_post', raise_exception=True)
