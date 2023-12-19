@@ -82,3 +82,8 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+class AddPost(generic.CreateView):
+    model = Post
+    template_name = 'blog/add_post.html'
+    fields = ('blogger', 'post_title', 'post_slug', 'post_image', 'excerpt', 'post_content', 'post_status')
