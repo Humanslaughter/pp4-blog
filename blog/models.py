@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -12,7 +13,7 @@ class Post(models.Model):
     post_title = models.CharField(max_length=200, unique=True)
     post_slug = models.SlugField(max_length=200, unique=True)
     post_image = CloudinaryField('image', default='placeholder')
-    post_content = models.TextField()
+    post_content = RichTextField(blank=True, null=True)
     post_status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     posted_on = models.DateTimeField(auto_now_add=True)

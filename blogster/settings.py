@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
     'about',
+    'ckeditor',
 ]
 
 SITE_ID = 1
