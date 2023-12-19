@@ -4,6 +4,14 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
+from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.models import User, Permission
+
+
+@login_required
+@permission_required('blog.add_photo', raise_exception=True)
+def photo_upload(request):
+   ...
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(post_status=1)
@@ -87,3 +95,21 @@ class AddPost(generic.CreateView):
     model = Post
     template_name = 'blog/add_post.html'
     fields = ('blogger', 'post_title', 'post_slug', 'post_image', 'excerpt', 'post_content', 'post_status')
+
+@login_required
+@permission_required('blog.add_post', raise_exception=True)
+def add_post(request):
+   ...
+    
+
+from django.contrib.auth.models import User
+user = User.objects.get(username='CodeInstitute')
+from django.contrib.auth.models import Permission
+permission = Permission.objects.get(codename='add_post')
+user.user_permissions.add(permission)
+
+from django.contrib.auth.models import User
+user = User.objects.get(username='James')
+from django.contrib.auth.models import Permission
+permission = Permission.objects.get(codename='add_post')
+user.user_permissions.add(permission)
