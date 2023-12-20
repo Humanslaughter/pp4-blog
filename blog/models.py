@@ -8,8 +8,10 @@ from ckeditor.fields import RichTextField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Post(models.Model):
-    blogger = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    blogger = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="blog_posts")
     post_title = models.CharField(max_length=200, unique=True)
     post_slug = models.SlugField(max_length=200, unique=True)
     post_image = CloudinaryField('image', default='placeholder')
@@ -28,9 +30,12 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('home')
 
+
 class Comment(models.Model):
-    blog_post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
-    blogger = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    blog_post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")
+    blogger = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
     approved = models.BooleanField(default=False)
     posted_on = models.DateTimeField(auto_now_add=True)

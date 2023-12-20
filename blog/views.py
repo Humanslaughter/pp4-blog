@@ -9,18 +9,14 @@ from django.contrib.auth.models import User, Permission
 from django.urls import reverse_lazy
 
 
-@login_required
-@permission_required('blog.add_photo', raise_exception=True)
-def photo_upload(request):
-   ...
-
 class PostList(generic.ListView):
     queryset = Post.objects.filter(post_status=1)
     template_name = "blog/index.html"
     paginate_by = 6
 
+
 def post_detail(request, slug):
-    
+
     queryset = Post.objects.filter(post_status=1)
     post = get_object_or_404(queryset, post_slug=slug)
     comments = post.comments.all().order_by("-posted_on")
@@ -71,7 +67,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -88,9 +85,11 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 class AddPost(generic.CreateView):
     model = Post
@@ -101,10 +100,14 @@ class AddPost(generic.CreateView):
         form.instance.blogger = self.request.user
         return super().form_valid(form)
 
+
 class EditPost(generic.UpdateView):
     model = Post
     template_name = 'blog/edit_post.html'
-    fields= ('post_title', 'post_slug', 'post_image', 'excerpt', 'post_content')
+    fields = (
+        'post_title', 'post_slug', 'post_image', 'excerpt', 'post_content'
+        )
+
 
 class DeletePost(generic.DeleteView):
     model = Post

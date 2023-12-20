@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
@@ -10,5 +11,6 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('post_status', 'posted_on',)
     prepopulated_fields = {'post_slug': ('post_title',)}
     summernote_fields = ('post_content',)
+
 
 admin.site.register(Comment)
