@@ -6,6 +6,7 @@ from .models import Post, Comment
 from .forms import CommentForm, PostForm
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import User, Permission
+from django.urls import reverse_lazy
 
 
 @login_required
@@ -104,6 +105,12 @@ class EditPost(generic.UpdateView):
     model = Post
     template_name = 'blog/edit_post.html'
     fields= ('post_title', 'post_slug', 'post_image', 'excerpt', 'post_content')
+
+class DeletePost(generic.DeleteView):
+    model = Post
+    template_name = 'blog/delete_post.html'
+    success_url = reverse_lazy('home')
+
 
 @login_required
 @permission_required('blog.add_post', raise_exception=True)

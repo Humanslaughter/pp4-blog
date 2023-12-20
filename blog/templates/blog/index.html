@@ -30,7 +30,11 @@
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.posted_on}} - <a href="{% url 'edit_post' post.pk %}">Edit</a></p>
+                            <p class="card-text text-muted h6">{{ post.posted_on}}
+                            <small>
+                                - <a href="{% url 'edit_post' post.pk %}">Edit</a>,
+                                <a href="{% url 'delete_post' post.pk %}">Delete</a></p>
+                            </small>
                             
                         </div>
                     </div>
