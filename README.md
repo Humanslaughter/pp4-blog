@@ -422,6 +422,18 @@ Clone the repository:<br>
 ### Code
 
 - I was coding along the Code Institute walkthrough project "I Think Therefore I Blog". All blog posts comes from their fixtures posts that I added images to from Google.
+- Help with assigning permissions:
+https://openclassrooms.com/en/courses/7107341-intermediate-django/7265147-assign-permissions-using-groups
+
+- Help with making AddPost, EditPost, and DeletePost pages:
+Youtuber: Codemy.com
+https://www.youtube.com/watch?v=m3efqF9abyg&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=4
+
+https://www.youtube.com/watch?v=Y1Us5jVT07E&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=16
+
+https://www.youtube.com/watch?v=8NPOwmtupiI&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=7
+
+https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=6
 
 ### Content
 
@@ -435,18 +447,31 @@ Code Institute's module for Portfolio Project 4: "Full-Stack Toolkit"
 
 Blog post images:
 [Image](https://unsplash.com/photos/silhouette-of-woman-raising-her-right-hand-IevaZPwq0mw)
+
 [Image]([Image](https://javaconceptoftheday.com/history-of-programming-languages/))
+
 [Image](https://medium.com/swlh/introduction-to-javascript-basics-cf901c05ca47)
-Imagehttps://www.udemy.com/course/the-ultimate-beginners-guide-to-django-django-2-python-web-dev-website/
+
+https://www.udemy.com/course/the-ultimate-beginners-guide-to-django-django-2-python-web-dev-website/
+
 https://www.activestate.com/blog/top-10-coding-mistakes-in-python-how-to-avoid-them/
+
 https://jaydevs.com/why-soft-skills-matter-when-hiring-a-software-developer/
+
 https://unsplash.com/photos/person-writing-on-white-paper-gcsNOsPEXfs
+
 https://www.hostinger.com/tutorials/web-developer-portfolio
+
 https://medium.com/@sanjay.mohindroo66/scrum-the-agile-framework-transforming-project-management-bb66f4487d28
+
 https://www.marceldigital.com/blog/what-is-agile-web-development-everything-you-need-to-know
+
 https://medium.com/javarevisited/from-spaghetti-code-to-clean-code-a-step-by-step-guide-to-refactoring-in-java-7352d7ddf28a
-varevisited/from-spaghetti-code-to-clean-code-a-step-by-step-guide-to-refactoring-in-java-7352d7ddf28a
+
+https://medium.com/javarevisited/from-spaghetti-code-to-clean-code-a-step-by-step-guide-to-refactoring-in-java-7352d7ddf28a
+
 https://www.linkedin.com/pulse/how-pick-your-first-programming-language-different-ways-alam-gilani
+
 https://builtin.com/software-engineering-perspectives/google-fu
 
 ###  Acknowledgments
