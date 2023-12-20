@@ -5,7 +5,21 @@ from .forms import ContactForm
 
 
 def about_me(request):
+    """
+    Renders the most recent information on the website author
+    and allows user contact requests.
 
+    Displays an individual instance of :model:`about.About`.
+
+    **Context**
+    ``about``
+        The most recent instance of :model:`about.About`.
+        ``contact_form``
+            An instance of :form:`about.ContactForm`.
+    
+    **Template**
+    :template:`about/about.html`
+    """
     if request.method == "POST":
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():

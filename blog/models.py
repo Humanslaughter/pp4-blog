@@ -1,15 +1,20 @@
 from django.db import models
-from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
-from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
+from cloudinary.models import CloudinaryField
 from ckeditor.fields import RichTextField
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
+
+
 class Post(models.Model):
+    """
+    Stores a single blog post entry related to :model:`auth.User`.
+    """
     blogger = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts")
     post_title = models.CharField(max_length=200, unique=True)
@@ -32,6 +37,10 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Stores a single comment entry related to :model:`auth.User`
+    and :model:`blog.Post`.
+    """
     blog_post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
     blogger = models.ForeignKey(
