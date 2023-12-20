@@ -30,7 +30,7 @@
                 don't hesitate to fill out the form with a little information about yourself,
                 and what you write about. I'm interested to hear what you have in mind!</p>
             <form method="post">
-                {{ collaborate_form | crispy }}
+                {{ contact_form | crispy }}
                 {% csrf_token %}
                 <button class="btn btn-secondary"
                     type="submit">Submit</button>

@@ -12,7 +12,7 @@ class About(models.Model):
         return self.title
 
 
-class CollaborateRequest(models.Model):
+class ContactRequest(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
