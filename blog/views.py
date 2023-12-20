@@ -115,17 +115,14 @@ class DeletePost(generic.DeleteView):
 @login_required
 @permission_required('blog.add_post', raise_exception=True)
 def add_post(request):
-   ...
-    
+    from django.contrib.auth.models import User
+    user = User.objects.get(username='CodeInstitute')
+    from django.contrib.auth.models import Permission
+    permission = Permission.objects.get(codename='add_post')
+    user.user_permissions.add(permission)
 
-from django.contrib.auth.models import User
-user = User.objects.get(username='CodeInstitute')
-from django.contrib.auth.models import Permission
-permission = Permission.objects.get(codename='add_post')
-user.user_permissions.add(permission)
-
-from django.contrib.auth.models import User
-user = User.objects.get(username='James')
-from django.contrib.auth.models import Permission
-permission = Permission.objects.get(codename='add_post')
-user.user_permissions.add(permission)
+    from django.contrib.auth.models import User
+    user = User.objects.get(username='James')
+    from django.contrib.auth.models import Permission
+    permission = Permission.objects.get(codename='add_post')
+    user.user_permissions.add(permission)
