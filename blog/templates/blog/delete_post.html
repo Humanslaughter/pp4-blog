@@ -5,6 +5,8 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-12 col-md-8 my-5">
+        {% if user.is_authenticated %}
+        {% if user.id == post.blogger.id %}
         <div class="page-header">
             <h1>Delete Post</h1>
             <br>
@@ -17,5 +19,13 @@
         </form>
         <br>
     </div>
+    {% else %}
+    Access denied.
+    {% endif %}
+    {% else %}
+
+    Access denied.
+
+    {% endif %}
 </div>
 {% endblock content %}

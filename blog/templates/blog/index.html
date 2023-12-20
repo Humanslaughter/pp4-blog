@@ -18,7 +18,8 @@
                                 <img class="card-img-top" id="img-border" src="{% static 'images/default.webp' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" id="img-border" src=" {{ post.post_image.url }}" alt="{{ post.post_title }}">
+                                <img class="card-img-top" id="img-border" src=" {{ post.post_image.url }}"
+                                    alt="{{ post.post_title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="blogger">Blogger: {{ post.blogger }}</p>
@@ -31,11 +32,16 @@
 
                             <hr />
                             <p class="card-text text-muted h6">{{ post.posted_on}}
-                            <small>
-                                - <a href="{% url 'edit_post' post.pk %}">Edit</a>,
-                                <a href="{% url 'delete_post' post.pk %}">Delete</a></p>
+                                {% if user.is_authenticated %}
+                                {% if user.id == post.blogger.id %}
+                                <small>
+                                    <a href="{% url 'edit_post' post.pk %}">Edit</a>
+
+                                    <a href="{% url 'delete_post' post.pk %}">Delete</a></p>
                             </small>
-                            
+                            {% endif %}
+                            {% endif %}
+
                         </div>
                     </div>
                 </div>
@@ -66,5 +72,5 @@
 {% endblock %}
 
 {% block copyright %}
-    Copyright 2023 | Theodore Wikström Kornelind
+Copyright 2023 | Theodore Wikström Kornelind
 {% endblock %}
