@@ -5,6 +5,7 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-12 col-md-8 my-5">
+        {% if perms.blog.add_post %}
         <div class="page-header">
             <h1>Add Post</h1>
         </div>
@@ -16,5 +17,8 @@
         </form>
         <br>
     </div>
+    {% else %}
+    Access denied.
+    {% endif %}
 </div>
 {% endblock content %}
