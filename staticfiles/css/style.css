@@ -38,7 +38,7 @@ body {
     background-color: rgb(72, 116, 186);
 }
 
-.img-border, #img-border {
+#img-border {
     border: #222832 ridge 5px;
 }
 
