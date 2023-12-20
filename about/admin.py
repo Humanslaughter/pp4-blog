@@ -8,6 +8,7 @@ class AboutAdmin(SummernoteModelAdmin):
 
     summernote_fields = ('content',)
 
+
 @admin.register(ContactRequest)
 class ContactRequestAdmin(admin.ModelAdmin):
 
