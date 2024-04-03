@@ -21,48 +21,48 @@ When a user is logged in, they're username will be shown as "Logged in as" at th
 ## Contents
 
 * [User Experience (UX)](#user-experience-ux)
-  * [User Stories](#user-stories)
+	* [User Stories](#user-stories)
 
 * [Design](#design)
-  * [Color Scheme](#color-scheme)
-  * [Typography](#typography)
+	* [Colour Scheme](#colour-scheme)
+	* [Typography](#typography)
 
 * [Features](#features)
-  * [Navigation Bar](#navigation-bar)
-  * [Footer](#footer)
-  * [About](#about)
-  * [Register](#register)
-  * [Login/Logout](#login-logout)
-  * [Logged In As/Not Logged In](#logged-in-as-not-logged-in)
-  * [Post List](#post-list)
-  * [Post Detailed View](#post-detailed-view)
-  * [Add Post](#add-post)
-  * [Edit/Delete Posts](#edit-delete-posts)
-  * [Comments Logged In/Not Logged In](#comments-logged-in-not-logged-in)
-  * [Comment Awaiting Approval](#comment-awaiting-approval)
-  * [Edit/Delete Comments](#edit-delete-comments)
+	* [Navigation Bar](#navigation-bar)
+	* [Footer](#footer)
+	* [About](#about)
+	* [Register](#register)
+	* [Login & Logout](#loginlogout)
+	* [Logged In As/Not Logged In](#logged-in-asnot-logged-in)
+	* [Post List](#post-list)
+	* [Post Detailed View](#post-detailed-view)
+	* [Add Post](#add-post)
+	* [Edit/Delete Posts](#editdelete-posts)
+	* [Comments Logged In/Not Logged In](#comments-logged-innot-logged-in)
+	* [Comment Awaiting Approval](#comment-awaiting-approval)
+	* [Edit/Delete Comments](#editdelete-comments)
 
-*[Future Features](#future-features)
+* [Future Features](#future-features)
 
-*[Technologies Used](#technologies-used)
-  *[Languages](#languages)
-  *[Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+* [Technologies Used](#technologies-used)
+	* [Languages](#languages)
+	* [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+ 
+ * [Testing](#testing)
+	* [Validator Testing](#validator-testing)
+	* [Futher Testing](#futher-testing)
+	* [Known Bugs & Issues](#known-bugs--issues)
 
-* [Testing](#testing)
-  * [Validator Testing](#validator-testing)
-  * [Futher Testing](#futher-testing)
-  * [Known Bugs & Issues](#known-bugs--issues)
-
-*[Deployment & Local Development](#deployment--local-development)
+* [Deployment & Local Development](#deployment--local-development)
  	* [Local Development](#local-development)
   		* [How To Fork](#how-to-fork)
   		* [How To Clone](#how-to-clone)
 
 * [Credits](#credits)
-  * [Code](#code)
-  * [Content](#content)
-  * [Media](#media)
-  * [Acknowledgements](#acknowledgements)
+  	* [Code](#code)
+ 	* [Content](#content)
+  	* [Media](#media)
+  	* [Acknowledgements](#acknowledgments)
 
 ---
 
@@ -392,7 +392,7 @@ Font Family Lato
 
 ## Deployment & Local Development
 
-### Local Deployment
+### Local Development
 
 Deployed using Heroku.
 
@@ -422,18 +422,13 @@ Clone the repository:<br>
 ### Code
 
 - I was coding along the Code Institute walkthrough project "I Think Therefore I Blog". All blog posts comes from their fixtures posts that I added images to from Google.
-- Help with assigning permissions:
-https://openclassrooms.com/en/courses/7107341-intermediate-django/7265147-assign-permissions-using-groups
-
-- Help with making AddPost, EditPost, and DeletePost pages:
-Youtuber: Codemy.com
-https://www.youtube.com/watch?v=m3efqF9abyg&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=4
-
-https://www.youtube.com/watch?v=Y1Us5jVT07E&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=16
-
-https://www.youtube.com/watch?v=8NPOwmtupiI&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=7
-
-https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=6
+- Help with assigning permissions from [OPENCLASSROOMS](https://openclassrooms.com/en/): <br>
+	- [Assign Permissions Using Groups](https://openclassrooms.com/en/courses/7107341-intermediate-django/7265147-assign-permissions-using-groups)
+- Help with making AddPost, EditPost, and DeletePost pages from Youtuber [Codemy.com](https://www.youtube.com/@Codemycom): <br>
+	- [Add Blog Post Page - Django Blog #4](https://www.youtube.com/watch?v=m3efqF9abyg&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=4) <br>
+	- [How To Determine The Correct User To Edit Posts - Django Blog #16](https://www.youtube.com/watch?v=Y1Us5jVT07E&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=16) <br>
+	- [Delete a Blog Post - Django Blog #7](https://www.youtube.com/watch?v=8NPOwmtupiI&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=7) <br>
+	- [Update and Edit Blog Post - Django Blog #6](https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=6)
 
 ### Content
 
@@ -445,34 +440,35 @@ Code Institute's module for Portfolio Project 4: "Full-Stack Toolkit"
 
 - [Placeholder image](https://pixabay.com/photos/wordpress-blogging-writing-typing-923188/)
 
-Blog post images:
-[Image](https://unsplash.com/photos/silhouette-of-woman-raising-her-right-hand-IevaZPwq0mw)
+- Blog post images: <br>
 
-[Image]([Image](https://javaconceptoftheday.com/history-of-programming-languages/))
-
-[Image](https://medium.com/swlh/introduction-to-javascript-basics-cf901c05ca47)
-
-https://www.udemy.com/course/the-ultimate-beginners-guide-to-django-django-2-python-web-dev-website/
-
-https://www.activestate.com/blog/top-10-coding-mistakes-in-python-how-to-avoid-them/
-
-https://jaydevs.com/why-soft-skills-matter-when-hiring-a-software-developer/
-
-https://unsplash.com/photos/person-writing-on-white-paper-gcsNOsPEXfs
-
-https://www.hostinger.com/tutorials/web-developer-portfolio
-
-https://medium.com/@sanjay.mohindroo66/scrum-the-agile-framework-transforming-project-management-bb66f4487d28
-
-https://www.marceldigital.com/blog/what-is-agile-web-development-everything-you-need-to-know
-
-https://medium.com/javarevisited/from-spaghetti-code-to-clean-code-a-step-by-step-guide-to-refactoring-in-java-7352d7ddf28a
-
-https://medium.com/javarevisited/from-spaghetti-code-to-clean-code-a-step-by-step-guide-to-refactoring-in-java-7352d7ddf28a
-
-https://www.linkedin.com/pulse/how-pick-your-first-programming-language-different-ways-alam-gilani
-
-https://builtin.com/software-engineering-perspectives/google-fu
+	- [Image](https://unsplash.com/photos/silhouette-of-woman-raising-her-right-hand-IevaZPwq0mw)
+	
+	- [Image](https://javaconceptoftheday.com/history-of-programming-languages/)
+	
+	- [Image](https://medium.com/swlh/introduction-to-javascript-basics-cf901c05ca47)
+	
+	- [Image](https://www.udemy.com/course/the-ultimate-beginners-guide-to-django-django-2-python-web-dev-website/)
+	
+	- [Image](https://www.activestate.com/blog/top-10-coding-mistakes-in-python-how-to-avoid-them/)
+	
+	- [Image](https://jaydevs.com/why-soft-skills-matter-when-hiring-a-software-developer/)
+	
+	- [Image](https://unsplash.com/photos/person-writing-on-white-paper-gcsNOsPEXfs)
+	
+	- [Image](https://www.hostinger.com/tutorials/web-developer-portfolio)
+	
+	- [Image](https://medium.com/@sanjay.mohindroo66/scrum-the-agile-framework-transforming-project-management-bb66f4487d28)
+	
+	- [Image](https://www.marceldigital.com/blog/what-is-agile-web-development-everything-you-need-to-know)
+	
+	- [Image](https://medium.com/javarevisited/from-spaghetti-code-to-clean-code-a-step-by-step-guide-to-refactoring-in-java-7352d7ddf28a)
+	
+	- [Image](https://medium.com/javarevisited/from-spaghetti-code-to-clean-code-a-step-by-step-guide-to-refactoring-in-java-7352d7ddf28a)
+	
+	- [Image](https://www.linkedin.com/pulse/how-pick-your-first-programming-language-different-ways-alam-gilani)
+	
+	- [Image](https://builtin.com/software-engineering-perspectives/google-fu)
 
 ###  Acknowledgments
 
